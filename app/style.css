@@ -2,6 +2,9 @@
 	margin: 0px;
 	padding: 0px;
 }
+[v-vloak] {
+	display: none;
+}
 
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -37,3 +40,9 @@ nav a{
 	background-color: #e35885;
 }
 
+.messagePara{
+	text-align: center;
+	font-size: 16px;
+	color: #000;
+	letter-spacing: 2px;
+}
