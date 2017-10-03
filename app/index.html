@@ -28,23 +28,25 @@
 
 	<div v-cloak id="menu">
 		
-		<nav>
-			<a v-on:click="makeActive('homeMenu', 'HOME')" v-bind:class="{ 'active' : homeActive }" id='homeMenu' href="#">Home</a>
-			<a v-on:click="makeActive('projectsMenu', 'PROJECTS')" v-bind:class="{ 'active' : projectsActive }"  id='projectsMenu' href="#">Projects</a>
-			<a v-on:click="makeActive('servicesMenu','SERVICES')" v-bind:class="{ 'active' : servicesActive }"  id='servicesMenu' href="#">Services</a>
-			<a v-on:click="makeActive('contactMenu', 'CONTACT')" v-bind:class="{ 'active' : contactActive }"  id='contactMenu' href="#">Contact</a>
+		<nav v-bind:class="active" v-on:click.prevent> 
+			<a v-on:click="makeActive('home')" class="home" href="#">Home</a>
+			<a v-on:click="makeActive('projects')" class="projects" href="#">Projects</a>
+			<a v-on:click="makeActive('services')" class="services" href="#">Services</a>
+			<a v-on:click="makeActive('contact')" class="contact" href="#">Contact</a>
+			<a v-on:click="makeActive('blog')" class="blog" href="#">Blog</a>
 		</nav>
 	
  
-	 	<div>
-	 		<p class='messagePara'>{{ message }}</p>
+	 	<div id="message">
+	 		<p v-if="active">Now displaying <b>{{ active }}</b></p>
+	 		<p v-else>Please click a menu item</p>
 	 	</div>
 
  	</div>
 
 
 
-<script type="text/javascript" src="https://unpkg.com/vue"></script>
-<script type="text/javascript" src="main.js"></script>
+	<script src="https://unpkg.com/vue"></script>
+	<script type="text/javascript" src="main.js"></script>
 </body>
 </html>

@@ -1,8 +1,9 @@
 *{
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
-[v-vloak] {
+
+[v-cloak] {
 	display: none;
 }
 
@@ -14,7 +15,6 @@ body {
 nav{
 	background-color: #5597b4;
 	margin: 60px auto 45px;
-	/*border: 1px solid red;*/
 	text-align: center;
 	width: 100%;
 
@@ -22,27 +22,40 @@ nav{
 }
 
 nav a{
-	display: inline-block;
-	/*font-weight: bold;*/
-	font-size: 16px;
 	color: #fff;
-	text-transform: uppercase;
-	text-decoration: none !important;
+	display: inline-block;
+	font-size: 16px;
+	letter-spacing: 2px;
 	padding-top: 18px;
 	padding-bottom: 18px;
 	padding-right: 30px;
 	padding-left: 30px;
-	/*border: 1px solid blue;*/
+	text-transform: uppercase;
+	text-decoration: none !important;
+
+}
+
+#message p{
+	text-align: center;
+	font-size: 16px;
 	letter-spacing: 2px;
+}
 
+#message p b {
 
-}.active{
+	text-transform: uppercase;
+}
+
+nav.home .home,
+nav.projects .projects,
+nav.services .services,
+nav.contact .contact,
+nav.blog .blog{
 	background-color: #e35885;
 }
 
-.messagePara{
-	text-align: center;
-	font-size: 16px;
-	color: #000;
-	letter-spacing: 2px;
-}
+
+
+
+
+
